@@ -1,0 +1,222 @@
+{
+	"results": {
+		"DEFAULT": [
+			{
+				"question_id": 59549,
+				"question_mark": 5,
+				"negative_mark_type": "round",
+				"negative_mark_value": "0.00",
+				"section_name": "DEFAULT",
+				"user_response": null,
+				"question": "\n<p>Which of the following commands will output to the shell if they are successful?</p>\n\n",
+				"number_correct": 0,
+				"explanation": null,
+				"answers": [
+					{
+						"id": 240776,
+						"answer": "\n<p>.startTransaction()</p>\n",
+						"correct": null,
+						"sort_order": 1
+					},
+					{
+						"id": 240777,
+						"answer": "\n<p>.commitTransaction()</p>\n",
+						"correct": null,
+						"sort_order": 2
+					},
+					{
+						"id": 240778,
+						"answer": "\n<p>.abortTransaction()</p>\n",
+						"correct": null,
+						"sort_order": 3
+					}
+				],
+				"is_subjective_quiz": false,
+				"question_type": "Single Correct"
+			},
+			{
+				"question_id": 59548,
+				"question_mark": 5,
+				"negative_mark_type": "round",
+				"negative_mark_value": "0.00",
+				"section_name": "DEFAULT",
+				"user_response": null,
+				"question": "\n<p>You are creating a transaction that does the following:</p>\n\n<p>Inserts a new savings account into the accounts collection for an existing customer</p>\n\n<p>Funds the new savings account with $200 from their checking account</p>\n\n<p>The transaction looks like this:</p>\n<pre>const session = db.getMongo().startSession()\nsession.startTransaction()\nconst account = session.getDatabase('bank').getCollection('accounts')\naccount.insertOne({\n account_id: \"MDB361428849\",\n account_holder: \"Donna Wood\",\n account_type: \"savings\",\n balance: 200.0,\n transfers_complete: [],\n last_updated: new Date()\n})\naccount.updateOne( { account_id: \"MDB919841472\" }, {$inc: { balance: -200.00 }})</pre>\n<p><br>What method should you use to complete this transaction? (Select one.)</p>\n",
+				"number_correct": 0,
+				"explanation": null,
+				"answers": [
+					{
+						"id": 240772,
+						"answer": "\n<p>endTransaction()<br>&nbsp;</p>\n",
+						"correct": null,
+						"sort_order": 1
+					},
+					{
+						"id": 240773,
+						"answer": "\n<p>commitTransaction()</p>\n",
+						"correct": null,
+						"sort_order": 2
+					},
+					{
+						"id": 240774,
+						"answer": "\n<p>endSessions()</p>\n",
+						"correct": null,
+						"sort_order": 3
+					},
+					{
+						"id": 240775,
+						"answer": "\n<p>completeTransaction()</p>\n",
+						"correct": null,
+						"sort_order": 4
+					}
+				],
+				"is_subjective_quiz": false,
+				"question_type": "Single Correct"
+			},
+			{
+				"question_id": 59547,
+				"question_mark": 5,
+				"negative_mark_type": "round",
+				"negative_mark_value": "0.00",
+				"section_name": "DEFAULT",
+				"user_response": null,
+				"question": "\n<p>Nadia needs to update customer account balances across multiple collections in MongoDB. It's important that the database operations used in this transaction adhere to ACID properties. Should Nadia use a transaction in this scenario? (Select one.)</p>\n",
+				"number_correct": 0,
+				"explanation": null,
+				"answers": [
+					{
+						"id": 240770,
+						"answer": "\n<p>Nadia does NOT need to use a transaction in this scenario because multi-document operations are inherently atomic in MongoDB.</p>\n",
+						"correct": null,
+						"sort_order": 1
+					},
+					{
+						"id": 240771,
+						"answer": "\n<p>Nadia does need to use a transaction in this scenario because multi-document operations are NOT inherently atomic in MongoDB.</p>\n",
+						"correct": null,
+						"sort_order": 2
+					}
+				],
+				"is_subjective_quiz": false,
+				"question_type": "Single Correct"
+			},
+			{
+				"question_id": 59546,
+				"question_mark": 5,
+				"negative_mark_type": "round",
+				"negative_mark_value": "0.00",
+				"section_name": "DEFAULT",
+				"user_response": null,
+				"question": "\n<p>Which of the following statements are true about multi-document transactions in MongoDB? (Select all that apply.)</p>\n\n",
+				"number_correct": 0,
+				"explanation": null,
+				"answers": [
+					{
+						"id": 240766,
+						"answer": "\n<p>Database operations that affect more than one document, like .updateMany(), are not inherently atomic in MongoDB and must be completed by using a multi-document transaction in order to have ACID properties.</p>\n",
+						"correct": null,
+						"sort_order": 1
+					},
+					{
+						"id": 240767,
+						"answer": "\n<p>Multi-document transactions should be treated as a precise tool that is used only in certain scenarios.</p>\n",
+						"correct": null,
+						"sort_order": 2
+					},
+					{
+						"id": 240768,
+						"answer": "\n<p>Using a multi-document transaction with a MongoDB database ensures that the database will be in a consistent state after running a set of operations on multiple documents.</p>\n",
+						"correct": null,
+						"sort_order": 3
+					},
+					{
+						"id": 240769,
+						"answer": "\n<p>When using multi-document transactions in MongoDB, each individual read and write operation must be wrapped in its own transaction.</p>\n",
+						"correct": null,
+						"sort_order": 4
+					}
+				],
+				"is_subjective_quiz": false,
+				"question_type": "Multiple Correct"
+			},
+			{
+				"question_id": 59545,
+				"question_mark": 5,
+				"negative_mark_type": "round",
+				"negative_mark_value": "0.00",
+				"section_name": "DEFAULT",
+				"user_response": null,
+				"question": "\n<p>Which of the following scenarios require the use of an ACID transaction? (Select all that apply.)</p>\n\n",
+				"number_correct": 0,
+				"explanation": null,
+				"answers": [
+					{
+						"id": 240762,
+						"answer": "\n<p>Updating a bank database to reflect the transfer of money from Customer A's bank account into Customer B's bank account.</p>\n",
+						"correct": null,
+						"sort_order": 1
+					},
+					{
+						"id": 240763,
+						"answer": "\n<p>Updating inventory and shopping cart records when a customer adds an item to their online shopping cart in an ecommerce app.</p>\n",
+						"correct": null,
+						"sort_order": 2
+					},
+					{
+						"id": 240764,
+						"answer": "\n<p>&nbsp;Updating records in a user database to bulk add user profile pictures.</p>\n",
+						"correct": null,
+						"sort_order": 3
+					},
+					{
+						"id": 240765,
+						"answer": "\n<p>Adding multiple documents that contain information about movies to a database.</p>\n",
+						"correct": null,
+						"sort_order": 4
+					}
+				],
+				"is_subjective_quiz": false,
+				"question_type": "Multiple Correct"
+			},
+			{
+				"question_id": 59544,
+				"question_mark": 5,
+				"negative_mark_type": "round",
+				"negative_mark_value": "0.00",
+				"section_name": "DEFAULT",
+				"user_response": null,
+				"question": "\n<p>Which of the following is the best definition of an ACID transaction? (Select one.)</p>\n\n",
+				"number_correct": 0,
+				"explanation": null,
+				"answers": [
+					{
+						"id": 240758,
+						"answer": "\n<p>A group of database operations that cannot fail.</p>\n",
+						"correct": null,
+						"sort_order": 1
+					},
+					{
+						"id": 240759,
+						"answer": "\n<p>Database operations that involve transferring money between to parties.</p>\n",
+						"correct": null,
+						"sort_order": 2
+					},
+					{
+						"id": 240760,
+						"answer": "\n<p>A group of database operations that must happen all together or not at all.</p>\n",
+						"correct": null,
+						"sort_order": 3
+					},
+					{
+						"id": 240761,
+						"answer": "\n<p>Database operations that are durable and will persist even if the server is down.</p>\n",
+						"correct": null,
+						"sort_order": 4
+					}
+				],
+				"is_subjective_quiz": false,
+				"question_type": "Single Correct"
+			}
+		]
+	}
+}
